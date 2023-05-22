@@ -9,7 +9,7 @@ def cusum(gRaw, h):
         if sNeg < -h:
             sNeg = 0
             tEvents.append(i)
-        elif sNeg > h:
+        elif sPos > h:
             sPos = 0
             tEvents.append(i)
     return pd.DatetimeIndex(tEvents)
